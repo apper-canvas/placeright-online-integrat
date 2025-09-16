@@ -183,15 +183,14 @@ class MessageService {
       if (!response.success) {
         console.error("Error marking message as read:", response.message);
         return false;
-      }
-
-      return true;
+return true;
     } catch (error) {
       console.error("Error marking message as read:", error?.response?.data?.message || error);
       return false;
-return false;
     }
   }
 }
+
+export default new MessageService();
 
 export default new MessageService();
