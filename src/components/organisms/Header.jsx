@@ -1,5 +1,7 @@
+import React from "react";
 import ApperIcon from "@/components/ApperIcon";
 import RoleSwitch from "@/components/molecules/RoleSwitch";
+import LogoutButton from "@/components/molecules/LogoutButton";
 import { useRole } from "@/hooks/useRole";
 
 const Header = () => {
@@ -22,14 +24,14 @@ const Header = () => {
 
         <div className="flex items-center gap-4">
           <RoleSwitch />
-          
-          <div className="flex items-center gap-2">
+<div className="flex items-center gap-2">
             <button className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg transition-colors">
               <ApperIcon name="Bell" className="w-5 h-5" />
             </button>
             <button className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg transition-colors">
               <ApperIcon name="Settings" className="w-5 h-5" />
             </button>
+            <LogoutButton />
           </div>
         </div>
       </div>
